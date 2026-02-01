@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
 export interface GoalsProps {
-    children: ReactNode;
+    money: number;
+    date: string; 
 }

@@ -1,0 +1,22 @@
+.main-container {
+   width: 100%;
+   display: grid;
+   
+   grid-template-columns: 1fr 1fr; 
+   grid-template-rows: repeat(6, 1fr); 
+   grid-template-areas: 
+       "cd gl"
+       "cd gl"
+       "cd nt"
+       "th nt"
+       "th oc"
+       "th oc";
+
+   gap: 2rem;
+}
+
+.cards-container { grid-area: cd; }
+.th-container    { grid-area: th; }    
+.goals-container { grid-area: gl; }
+.os-container    { grid-area: oc; }
+.nt-container    { grid-area: nt; }

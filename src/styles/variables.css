@@ -1,0 +1,18 @@
+:root {
+    --bg-background: #F0F0F0;
+    --bg-main-card: #FFF;
+    --tt-header: #000;
+    --st-header:#AEAEAE;
+    --link-sidebar: #C7C7C7;
+
+    --bd-radius: 5.5rem;
+    
+    --space-xs: 0.4rem;  
+    --space-sm: 0.8rem;  
+    --space-md: 1.6rem;  
+    --space-lg: 2.4rem;  
+    --space-xl: 3.2rem;  
+    --space-2xl: 4.8rem; 
+
+    -hr-subtitle: #cfcfcf;
+}

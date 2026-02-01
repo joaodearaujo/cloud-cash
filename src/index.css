@@ -1,0 +1,18 @@
+@import './styles/variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+*  {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    font-family: Google Sans;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}

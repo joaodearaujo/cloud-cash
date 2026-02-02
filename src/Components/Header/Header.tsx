@@ -5,8 +5,8 @@ const Header = ({user}: HeaderProps) => {
     return (
         <div className="header">
             <div className="header__text-area">
-                <h1 className="header__title">Weekly sumup</h1> 
-                <h2 className="header__subtitle">Get Summary of your weekly online transactions here.</h2> 
+                <h1 className="header__title">Student Life Manager</h1> 
+                <h2 className="header__subtitle">Manage your academic life, finances, and daily tasks in one place.</h2> 
             </div>
             <div className="header__user-area">
                 <img src={user.img} alt="User Profile Image" className="header__icon" />

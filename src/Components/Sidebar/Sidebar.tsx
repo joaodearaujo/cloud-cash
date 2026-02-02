@@ -17,8 +17,8 @@ const Sidebar = () => {
 
     const SidebarItems: SidebarItemsProps[] = [
         {name:'Overview ', img:'./public/profile-image.png'},
-        {name:'Transactions ', img:'./public/profile-image.png'},
         {name:'Cards ', img:'./public/profile-image.png'},
+        {name:'Transactions ', img:'./public/profile-image.png'},
         {name:'Invoices ', img:'./public/profile-image.png'},
         {name:'Goals', img:'./public/profile-image.png'},
         {name:'Settings', img:'./public/profile-image.png'},
@@ -26,18 +26,12 @@ const Sidebar = () => {
 
     return (
         <div className="sidebar-container">
-
             <img src="./public/cloud-cash.png" alt="Sidebar Icon" className="sidebar__icon" />
-
-            <div className="sidebar__links-container">
+            <nav className="sidebar__links-container">
                 {SidebarItems.map((item, index) => (
-                    <SidebarItem
-                        key={index}
-                        name={item.name}
-                        img={item.img}
-                    />
+                    <SidebarItem key={index} {...item}/>
                 ))}
-            </div>
+            </nav>
         </div>)
 }
 

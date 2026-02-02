@@ -34,7 +34,7 @@ const CardLimit = ({weeklyLimit, weeklyUsed} : UserCard ) => {
                 <div className="card-limit__fill" style={{width:`${usedPercentage}%`}}></div>
             </div>
             <div className="card-limit__info">
-                <p className="card-limit__label">Weekly payment limit</p>
+                <p className="card-limit__label">Monthly payment limit</p>
                 <p className="card-limit__value">{`$${weeklyUsed ?? '0'} / $${weeklyLimit ?? '0'}`}</p>
             </div>
         </div>
@@ -140,7 +140,6 @@ const Cards = (MOCK_CARDS : UserCard ) => {
     return(
     <div className="cards-container">
         <h1 className="cards__title">Cards</h1>
-        
         <div className="cards__wrapper"> 
             <div className="cards__main-column">
                 <div className="cards__navigation">

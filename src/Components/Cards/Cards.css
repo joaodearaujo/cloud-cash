@@ -5,7 +5,7 @@
     min-height: 45rem;
     display: flex;
     flex-direction: column;
-    padding: var(--space-md); 
+    padding: var(--space-lg); 
     gap: var(--space-sm);
     border-radius: var(--bd-radius);
     background-color: var(--bg-main-card);
@@ -14,7 +14,6 @@
 
 .cards__title {
     width: auto;
-    margin-left: 2rem;
     font-size: 2.4rem;
     color: var(--txt-primary);
     font-weight: 600;
@@ -23,10 +22,9 @@
 /* === CARDS LAYOUT STRUCTURE === */
 .cards__wrapper {
     height: 100%;
-    padding-right: 2rem;
-    padding-left: 1rem;
     display: flex;
     flex-wrap: wrap;
+   
 }
 
 .cards__main-column {
@@ -43,6 +41,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--space-md);
 }
 
@@ -173,7 +172,7 @@
 
 .vertical-line {
     position: absolute;
-    left: 64%;          
+    left: 65%;          
     top: 10%;  
     bottom: 10%;       
     width: 1px;

@@ -10,7 +10,7 @@ const GoalsCard = ({cost, date, img, name} : GoalsProps) => {
             </div>
             <div className="goals__label">
                     <img src={`${img}`} alt="Goal Image" className="goals__icon" />
-                    <h2 className="goals__goal-name">{name}</h2>
+                    <h2 className="goals__name">{name}</h2>
             </div>
         </div>
     )   
@@ -23,28 +23,35 @@ const Goals = () => {
         id: 1,
         cost: '550',
         date: '12/20/20',
-        img: './public/profile-image.png',
+        img: './public/holidays.png',
         name: 'Holidays',
         },
         {
         id: 1,
+        cost: '550',
+        date: '12/20/20',
+        img: './public/holidays.png',
+        name: 'Holidays',
+        },
+        {
+        id: 2,
         cost: '200',
         date: '12/20/20',
-        img: './public/profile-image.png',
+        img: './public/renovation.png',
         name: 'Renovation',
         },
         {
-        id: 1,
+        id: 3,
         cost: '820',
         date: '12/20/20',
-        img: './public/profile-image.png',
+        img: './public/xbox.png',
         name: 'Xbox',
         },
         {
-        id: 1,
+        id: 3,
         cost: '820',
         date: '12/20/20',
-        img: './public/profile-image.png',
+        img: './public/xbox.png',
         name: 'Xbox',
         },
     ]
@@ -52,19 +59,22 @@ const Goals = () => {
     return(
         <div className="goals-container">
             <div className="goals__header">
-                <h1 className="goals__title">Goals</h1>
+                <p className="goals__title">Goals</p>
+                <button className="goals__add-goal">+</button>
             </div>
-            <div className="goals__card-container">
-                {goals.map((goal, key) => (
-                    <GoalsCard
-                    id={goal.id}
-                    key={goal.id}
-                    cost={goal.cost}    
-                    date={goal.date}
-                    img={goal.img}
-                    name={goal.name}
-                    />
-                ))}
+            <div className="goals__wrapper">
+                <div className="goals__card-container">
+                    {goals.map((goal, key) => (
+                        <GoalsCard
+                        id={goal.id}
+                        key={goal.id}
+                        cost={goal.cost}
+                        date={goal.date}
+                        img={goal.img}
+                        name={goal.name}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

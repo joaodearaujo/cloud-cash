@@ -3,70 +3,77 @@
 }
 
 .goals-container{
-    height: 33%;
+    height: auto;
+    min-width: 0;
+    width: 100%;
     display : flex;
     flex-direction: column;
     gap: var(--space-xs);
     background-color: transparent;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .goals__header {
-    width: 12em;
+    width: 100%;
     padding: var(--space-sm);
     display: flex;
     gap: var(--space-sm);
     align-items: center;
-    justify-content: space-between;
 }
 
 .goals__title {
-    font-size: 2.4em;
+    margin-left: 1rem;
+    font-size: 2.4rem;
     color: var(--txt-primary);
     font-weight: 600;
 }
 
 .goals__add-goal {
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--bd-radius);
     cursor: pointer;
     background-color: #fec146;
     border: none;
-    outline: none;
-
+    font-size: 1.8rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: all 0.3s ease-in-out;
 }
 
 .goals__add-goal:hover {
     background-color: #f7a429;
 }
-.goals__add-goal p {
-    text-align: center;
-    font-size: 2em;
-    font-weight: 400;
-}
 
 .goals__card-container {
     width: 100%;
     display: flex;
-    gap: var(--space-sm);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: var(--space-md) var(--space-lg);
     align-items: center;
     justify-content: space-between;
+    gap: var(--space-md);
 }  
 
+.goals__wrapper {
+    display: flex;
+    flex-shrink: 0; 
+}
+
 .goals__card {
-    width: 15em;
-    min-height: 100%;
+    min-height: 20rem;
+    max-width: 18rem;
+    flex-shrink: 0; 
     display: flex;
     flex-direction: column;
     gap: var(--space-2xl);
     align-items: flex-start;
     justify-content: space-between;
-    padding: var(--space-sm) var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
     border-radius: var(--bd-radius);
     box-shadow: var(--bx-shadow);
 }   
@@ -80,7 +87,7 @@
 .goals__label {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-md);
 }
 
 .goals__cost {
@@ -100,7 +107,7 @@
     height: 3em;
 }
 
-.goals__goal-name {
+.goals__name {
     font-size: 2.2em;
     font-weight: 400;
     color: var(--txt-primary);

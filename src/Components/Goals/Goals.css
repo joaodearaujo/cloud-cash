@@ -36,8 +36,6 @@
     cursor: pointer;
     background-color: #fec146;
     border: none;
-    font-size: 1.8rem;
-    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +46,11 @@
     background-color: #f7a429;
 }
 
+.goals__add-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .goals__card-container {
     width: 100%;
     display: flex;
@@ -55,7 +58,7 @@
     scroll-behavior: smooth;
     padding: var(--space-md) var(--space-lg);
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-betweengit;
     gap: var(--space-md);
 }  
 

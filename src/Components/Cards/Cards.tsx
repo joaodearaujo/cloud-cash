@@ -63,7 +63,6 @@ const BalanceSummary = ({currentBalance, income, outcome} : UserCard) => {
 const Cards = (MOCK_CARDS : UserCard ) => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
-
     const nextIndex = () => setCurrentIndex((prev) => (prev + 1 ) % userCards.length);
     const prevIndex = () => setCurrentIndex((prev) => (prev - 1 + userCards.length) % userCards.length);
     
@@ -157,7 +156,7 @@ const Cards = (MOCK_CARDS : UserCard ) => {
             </div>
             <div className="vertical-line"></div>
             <div className="cards__side-column">
-                <BalanceSummary {...currentCard} />
+                <BalanceSummary {...currentCard} /> 
             </div>
         </div>
     </div>

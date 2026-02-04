@@ -8,22 +8,14 @@ const SidebarItem = ({name, img} : SidebarItemsProps ) => {
                 <img src={`${img}`} alt="Item icon" className="item__icon" />
                 <p className="item-name">{name}</p>
             </a>    
-
-    )
+        )
 }
 
-
 const Sidebar = () => {
-
     const SidebarItems: SidebarItemsProps[] = [
-        {name:'Overview ', img:'./public/profile-image.png'},
-        {name:'Cards ', img:'./public/profile-image.png'},
-        {name:'Transactions ', img:'./public/profile-image.png'},
-        {name:'Invoices ', img:'./public/profile-image.png'},
-        {name:'Goals', img:'./public/profile-image.png'},
-        {name:'Settings', img:'./public/profile-image.png'},
+        {name:'Financials', img:'./public/financials.png'},
+        {name:'Cards ', img:'./public/card.png'},
     ]
-
     return (
         <div className="sidebar-container">
             <img src="./public/cloud-cash.png" alt="Sidebar Icon" className="sidebar__icon" />

@@ -1,7 +1,20 @@
 import { useState } from "react";
-import { UserCard } from "../../moks/FinancialData";
 import Bar from "../common/Bar";
 import './Cards.css'
+
+export interface UserCard {
+    bankName: string;
+    cardNumber: string;
+    typeCard: string;
+    name: string;
+    expirationDate: string;
+    weeklyLimit: number;
+    weeklyUsed: number;
+    currentBalance: number;
+    income: number;
+    outcome: number;
+    color: string;
+}
 
 const userCards: UserCard[] = [
   {

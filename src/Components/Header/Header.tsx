@@ -1,7 +1,19 @@
 import { HeaderProps } from "./Header.type";
 import './Header.css'
 
-const Header = ({user}: HeaderProps) => {
+interface UserProfile {
+  name: string;
+  role: 'Manager' | 'Internship';
+  img: string; 
+}
+
+const user: UserProfile = {
+  name: 'João de Araújo',
+  role: 'Internship',
+  img: '/profile-image.png'
+}
+
+const Header = (user: UserProfile) => {
     return (
         <div className="header">
             <div className="header__text-area">

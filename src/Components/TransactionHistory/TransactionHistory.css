@@ -9,7 +9,7 @@
    gap: var(--space-sm);
    border-radius: var(--bd-radius);
    background-color: var(--bg-main-card);
-   box-shadow: var(--bx-shadow);
+   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .transaction-history__title {
@@ -60,7 +60,7 @@
    font-size: 1.8rem;
    font-weight: 200;
    vertical-align: middle;
-   padding: var(--space-lg) 0;
+   padding: 1.2rem 0;
    white-space: nowrap; 
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -83,6 +83,7 @@
 .history__cell--receiver, .history__cell--amount {
    color: var(--txt-primary);
    padding-left: var(--space-sm);
+   padding-right: var(--space-lg);
 }
 
 .history__cell--receiver, .transaction-history__header:first-child {

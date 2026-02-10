@@ -1,5 +1,6 @@
 import { GoalsProps } from "./Goals.type";
 import './Goals.css';
+import { useRef } from "react";
 
 
 const goals = [
@@ -91,41 +92,64 @@ const GoalsItem = ({cost, date, img, name} : GoalsProps) => {
 }
 
 const Goals = () => {
+
+const goalsRef = useRef<HTMLDivElement>(null);
+
+const EventScrollNext = () => {
+  if (goalsRef.current) {
+    goalsRef.current.scrollBy({
+      left: 300,
+      behavior: 'smooth'
+    });
+  }
+};
        
-    return(
-        <div className="goals">
-            <div className="goals__header">
-                <p className="goals__title">Goals</p>
-                <button className="goals__add-goal"
+const EventScrollPrevious = () => {
+  if (goalsRef.current) {
+    goalsRef.current.scrollBy({
+      left: -300,
+      behavior: 'smooth'
+    });
+  }
+};
+       
+  
+  return(
+      <div className="goals">
+          <div className="goals__header">
+              <p className="goals__title">Goals</p>
+              <button className="goals__add-goal"
 
-                >
-                    <img src="./public/add.png" alt="button"className="goals__add-icon" />
-                </button>
-            </div>
-            
-                <div className="goals__wrapper">
-                    <button className="goals__button goals__button--previous"
-                            aria-label="Next Item"
-                    >
-                       <img src="/left-arrow.png" alt="" aria-hidden="true" className="goals__arrow-icon"/>
-                    </button>
+              >
+                  <img src="./public/add.png" alt="button"className="goals__add-icon" />
+              </button>
+          </div>
+          
+              <div className="goals__wrapper">
+                  <button className="goals__button goals__button--previous"
+                          aria-label="Previous Item"
+                          onClick={EventScrollPrevious}
+                          >
+                      <img src="/left-arrow.png" alt="" aria-hidden="true" className="goals__arrow-icon"/>
+                  </button>
 
-                    <div className="goals__item-container" >
-                        {goals.map((goal, key) => (
-                            <GoalsItem key={goal.id} {...goal}
-                            />
-                            
-                        ))}
-                    </div>
+                  <div className="goals__item-container " ref={goalsRef} >
+                      {goals.map((goal, key) => (
+                        <GoalsItem key={goal.id} {...goal}
+                        />
+                        
+                      ))}
+                  </div>
 
-                    <button className="goals__button goals__button--next"
-                            aria-label="Next Item"
-                    >
-                       <img src="/right-arrow.png" alt="" aria-hidden="true" className="goals__arrow-icon"/>
-                    </button>
-                </div>
-        </div>
-    )
+                  <button className="goals__button goals__button--next"
+                          aria-label="Next Item"
+                          onClick={EventScrollNext}
+                  >
+                      <img src="/right-arrow.png" alt="" aria-hidden="true" className="goals__arrow-icon"/>
+                  </button>
+              </div>
+      </div>
+  )
 }
 
 export default Goals;

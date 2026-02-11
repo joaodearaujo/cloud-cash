@@ -2,15 +2,18 @@
     --bg-background: #F0F0F0;
     --bg-main-card: #FFF;
 
+    --card-default-color: #282c3;
+    --card-text-color: #FFF;
+    --card-amount-current: #197bbd;
+    --card-amount-income: #66ad9c;
+    --card-amount-outcome: #c45f4e;
+
     --txt-primary: #363636;
     --txt-secondary: #9e9e9e;
- 
-
     --link-sidebar: #C7C7C7;
 
-;
-
     --bd-radius: 3.5rem;
+    --bd-standard: 1px solid rgba(0, 0, 0, 0.1);
     --bx-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, rgba(0, 0, 0, 0) 0px 1px 2px;
     
     --space-xs: 0.4rem;  

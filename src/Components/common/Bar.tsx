@@ -1,5 +1,5 @@
 import './Bar.css'
-import { BarProps } from './common.type';
+import { BarProps } from './Common.type';
 
 const Bar = ({percentage, color}: BarProps) => {
     return (
@@ -8,7 +8,7 @@ const Bar = ({percentage, color}: BarProps) => {
                 className="bar__fill" 
                 style={{
                     width: `${percentage ?? 0}%`, 
-                    backgroundColor: color 
+                    backgroundColor: color,
                 }}
             ></div>
         </div>

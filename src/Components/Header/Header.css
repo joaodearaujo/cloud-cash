@@ -7,10 +7,6 @@
     background-color: transparent;
 }
 
-*{
-    letter-spacing: 0.05em;
-}
-
 .header__text-area {
     display: flex;
     flex-direction: column;
@@ -22,10 +18,12 @@
     gap: var(--space-sm);
     margin-right: var(--space-xl);
 }
+
 .header__icon {
     width: 5em;
     height: 5em;
 }
+
 .header__user-info {
     display: flex;
     flex-direction: column;

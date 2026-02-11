@@ -3,37 +3,32 @@
     position: relative;
     width: 100%;
     height: 55%;
-    min-width: 0;
-    min-height: 0;
     display: flex;
     flex-direction: column;
     padding: var(--space-lg); 
-    gap: var(--space-md);
+    align-items: flex-start;
+    gap: var(--space-sm);
     border-radius: var(--bd-radius);    
     background-color: var(--bg-main-card);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-
+    border: var(--bd-standard);
 }
 
 .cards__title {
-    width: auto;
+    text-align: center;
     font-size: 2.4rem;
     color: var(--txt-primary);
     font-weight: 600;
 }
 
-/* === CARDS LAYOUT STRUCTURE === */
+/* === CARDS LAYOUT === */
 .cards__wrapper {
     height: 100%;
     width: 100%;
-    min-width: 0;
     display: flex;
-    gap: var(--space-xs);
-    align-items: center;
     justify-content: space-between
 }
 
-.cards__main-column {
+.cards__left-column {
     height: 100%;
     width: 60%;
     min-width: 0;
@@ -46,7 +41,6 @@
 .cards__navigation {
     width: 100%;
     height: 100%;
-    min-width: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,8 +61,16 @@
 .cards__nav-button:hover {
     transform: translateY(-3px);
 }
+
 .cards__arrow-icon {
     width: 3rem;
+}
+
+.cards__line-top{
+    height: 1px;
+    width: 106%;
+    color: var(--txt-secondary);
+    opacity: 0.3;
 }
 
 .cards__line {
@@ -78,38 +80,36 @@
     opacity: 0.3;
 }
 
-.cards__side-column {
+.cards__right-column {
     height: 100%;
     width: 35%;
     display: flex;
     align-items: start;
 }
 
-/* === CREDIT CARD VISUAL (THE CARD) === */
+/* === CREDIT CARD VISUAL === */
 .card {
-    height: 22rem;
-    width: 75%;
-    min-width: 0;
-    max-width: 40rem;
+    height: 24rem;
+    width: 36rem;
+    flex-grow: 0;
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: var(--space-md);
-    border-radius: 22px;
-    background: #2282c3 url('/image.png') no-repeat 90px 70px / contain;
+    padding: var(--space-lg);
+    border-radius: 18px;
+    background-color: var(--card-default-color);
     cursor: pointer;
-    transition: 0.3s all ease-out;
+    transition: 0.4s all ease-out;
 }
 
 .card:hover{
-    transform: translateY(-1px);
-    transform: scale(1.01);
+    transform: scale(0.99);
 }
 
 .card__content {
     height: 100%;
     width: 100%;
-    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -117,7 +117,6 @@
 
 .card__header {
     display: flex;
-    gap: var(--space-sm);
     flex-direction: column;
 }
 
@@ -135,47 +134,47 @@
 .card__brand {
     font-size: 2em;
     font-weight:600;
-    color: #fff;
+    color: var(--card-text-color);
 }
 
 .card__type {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 200;
-    color: #e4e4e4;
+    color: var(--card-text-color);
+    opacity: 0.6;
     text-transform: uppercase;
 }
 
 .card__number {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     white-space: nowrap;
     font-weight: 600;
     letter-spacing: 0.2rem;
-    color: #fff;
+    color: var(--card-text-color)
 }
 
 .card__label {
     font-size: 1.2rem;
     white-space: nowrap;
     font-weight: 400;
-    color: #fff;
+    color: var(--card-text-color);
 }
 
 .card__value {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;   
-    color: #fff;
+    color: var(--card-text-color);
     white-space: nowrap;
     text-transform: uppercase;
 }
 
 
-/* === CARD LIMIT SECTION === */
+/* === CARD LIMIT === */
 .limit {
     width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: var(--space-sm);
 }
 
@@ -188,7 +187,7 @@
 
 .limit__label {
     color: var(--txt-secondary);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.4rem;
 }
 
@@ -210,15 +209,13 @@
 }
 
 .balance__item {
-    width: auto;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
 .balance__amount {
-    display: inline;
-    text-align: right;
     font-size: 3.2rem;
     font-weight: 400;
     width: 100%;
@@ -227,20 +224,20 @@
     text-overflow: ellipsis;
 }
 
-.balance__amount--primary {
+.balance__amount--current    {
     font-size: 4.6rem;
     font-weight: 600;
     width: 100%;
-    color: #197bbd;
+    color: var(--card-amount-current);
 }
 
 .balance__amount--income {
     font-weight: 500;
-    color: #66ad9c;
+    color: var(--card-amount-income);
 }
 
 .balance__amount--outcome {
-    color: #c45f4e;
+    color: var(--card-amount-outcome);
 }
 
 .balance__label {

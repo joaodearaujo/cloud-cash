@@ -13,18 +13,20 @@ const SidebarLink = ({name, img} : SidebarItemsProps ) => {
 
 const Sidebar = () => {
     const SidebarItems: SidebarItemsProps[] = [
-        {name:'Financials', img:'./public/financials.png'},
-        {name:'Cards ', img:'./public/card.png'},
-    ]
+        { name: 'Overview', img: '/financials.png' },
+        { name: 'Cards', img: '/card.png' },
+    ];
+    
     return (
-        <div className="sidebar">
-            <img src="./public/cloud-cash.png" alt="Sidebar Icon" className="sidebar__icon" />
+        <>
+            <p className="side-bar__logo">OmniCard</p>
             <nav className="sidebar__links-container">
                 {SidebarItems.map((item, index) => (
                     <SidebarLink key={index} {...item}/>
                 ))}
             </nav>
-        </div>)
+        </>
+    )
 }
 
 export default Sidebar;

@@ -1,12 +1,9 @@
 import './App.css'
-import MainCard from './Components/MainCard/MainCard';
-import Sidebar from './Components/Sidebar/Sidebar';
-import Header from './Components/Header/Header';
-import Main from './Components/Main/Main';
+import AppLayout from './Components/AppLayout/AppLayout.tsx';
 
 function App() {
   return (
-      <MainCard/>
+      <AppLayout/>
   )
 }
 

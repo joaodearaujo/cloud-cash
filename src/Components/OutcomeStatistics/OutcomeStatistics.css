@@ -74,9 +74,14 @@
 
 .statistic__label {
    width: 10rem;
-   font-size: 2rem;
+   font-size: 1.8rem;
+   font-weight: 400;
+   white-space: nowrap;
+   color: var(--txt-secondary);
 }
 
 .statistic__percentage {
+   font-weight: 500;
+   color: var(--txt-primary);
    font-size: 2.5rem;
 }

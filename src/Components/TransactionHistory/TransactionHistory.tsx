@@ -129,19 +129,22 @@ const TransactionHistory = () => {
             <div className="transaction-history__table-container">
                 <table className="transaction-history__table">
                     <thead className="transaction-history__head">
-                        <th className="transaction-history__header transaction-history__header--receiver">Receiver</th>
-                        <th className="transaction-history__header transaction-history__header--type" >Type</th>
-                        <th className="transaction-history__header transaction-history__header--date">Date</th>
-                        <th className="transaction-history__header transaction-history__header--amount">Amount</th>
+                        <tr className="transaction-history__row">
+                          <th className="transaction-history__header transaction-history__header--receiver">Receiver</th>
+                          <th className="transaction-history__header transaction-history__header--type" >Type</th>
+                          <th className="transaction-history__header transaction-history__header--date">Date</th>
+                          <th className="transaction-history__header transaction-history__header--amount">Amount</th>
+                        </tr>
                     </thead>
                     {historyInfo.map((item, index) => (
                         <HistoryTable
-                            id={index}
-                            receiver={item.receiver}
-                            type={item.type}
-                            date={item.date}
-                            amount={item.amount}
-                            icon={item.icon}
+                          id={item.id}
+                          key={item.id}
+                          receiver={item.receiver}
+                          type={item.type}
+                          date={item.date}
+                          amount={item.amount}
+                          icon={item.icon}
                         />
                     ))}
                 </table>

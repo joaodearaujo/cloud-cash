@@ -65,7 +65,7 @@ const Statistic = ({data} : {data: historyInfoProps[]}) => {
     }, {})
 
     const totalItems =  data.length;
-
+''
     return(
        <>
         {Object.keys(statistcs).map((categoryName) => {
@@ -75,8 +75,7 @@ const Statistic = ({data} : {data: historyInfoProps[]}) => {
             const barColor = CATEGORY_COLORS[categoryName] || CATEGORY_COLORS.default;
 
             return (
-                <div className="statistic">
-                    <img src="./public/holidays.png" alt="" className="statistic__icon" />
+                <div className="statistic" key={categoryName}>
                     <div className="statistic__group">
                         <Bar percentage={percentage} color={barColor}/>
                         <p className="statistic__label">{categoryName}</p>

@@ -1,0 +1,11 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",      // Importante para reconhecer o Node moderno
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,   // Permite importar o 'http' de forma limpa
+    "skipLibCheck": true,      // Evita erros de tipos de bibliotecas terceiras
+    "forceConsistentCasingInFileNames": true
+  }
+}
